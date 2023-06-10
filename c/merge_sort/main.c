@@ -91,6 +91,8 @@ void merge_sort(int arr[], int n) {
             ir++;
         }
     }
+    free(left);
+    free(right);
 }
 
 // function to print array
