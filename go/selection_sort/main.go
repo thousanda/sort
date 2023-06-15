@@ -12,7 +12,7 @@ func main() {
 	timer.Start()
 
 	// 計測したい処理
-	testSelectionSort()
+	runSelectionSort()
 
 	// 計測終了
 	timer.Stop()
@@ -20,7 +20,7 @@ func main() {
 	timer.Print()
 }
 
-func testSelectionSort() {
+func runSelectionSort() {
 	// create multiple slices of integers
 	itemsList := [][]int{
 		{5, 4, 3, 2, 1},
