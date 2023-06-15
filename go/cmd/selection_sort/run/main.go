@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/thousanda/sort/go/selection_sort/selection_sort"
-	"github.com/thousanda/sort/go/selection_sort/timer"
+	"github.com/thousanda/sort/go/selection_sort"
+	"github.com/thousanda/sort/go/timer"
 )
 
 // 入力なしで試しに動かす

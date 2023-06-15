@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/thousanda/sort/go/selection_sort/reader"
-	"github.com/thousanda/sort/go/selection_sort/selection_sort"
-	"github.com/thousanda/sort/go/selection_sort/timer"
+	"github.com/thousanda/sort/go/reader"
+	"github.com/thousanda/sort/go/selection_sort"
+	"github.com/thousanda/sort/go/timer"
 	"os"
 )
 
