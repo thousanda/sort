@@ -1,3 +1,3 @@
 #!/bin/bash
 
-go run ./main.go < sample.txt
+go run ./cmd/run_from_stdin/main.go < sample.txt
