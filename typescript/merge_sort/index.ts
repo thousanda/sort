@@ -1,5 +1,21 @@
-// main function to test merge sort
+import { Timer } from "../timer/timer";
+
 const main = (): void => {
+    const timer = new Timer();
+
+    // 計測開始
+    timer.Start();
+
+    // 計測したい処理
+    runMergeSort();
+
+    // 計測終了
+    timer.Stop();
+    // 計測結果出力
+    timer.Print();
+};
+
+const runMergeSort = (): void => {
     // create an array of numbers
     const arrList: number[][] = [
         [5, 4, 3, 2, 1],

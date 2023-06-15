@@ -1,5 +1,21 @@
-// main function to test the selection sort
+import { Timer } from "../timer/timer";
+
 const main = (): void => {
+    const timer = new Timer();
+
+    // 計測スタート
+    timer.Start();
+
+    // 計測したい処理
+    runSelectionSort();
+
+    // 計測終了
+    timer.Stop();
+    // 計測結果出力
+    timer.Print()
+};
+
+const runSelectionSort = (): void => {
     // create an array of numbers
     const arrList: number[][] = [
         [5, 4, 3, 2, 1],
@@ -15,7 +31,7 @@ const main = (): void => {
         // print the array
         console.log(arr);
     }
-}
+};
 
 // sort the array using selection sort
 const selectionSort = (arr: number[]): void => {
@@ -36,7 +52,7 @@ const selectionSort = (arr: number[]): void => {
         arr[i] = arr[min];
         arr[min] = temp;
     }
-}
+};
 
 // call the main function
 main();
