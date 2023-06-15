@@ -1,9 +1,26 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/thousanda/sort/go/merge_sort/timer"
+)
 
-// main function to test merge sort
 func main() {
+	timer := timer.Timer{}
+
+	// 計測スタート
+	timer.Start()
+
+	// 計測したい処理
+	testMergeSort()
+
+	// 計測終了
+	timer.Stop()
+	// 計測結果出力
+	timer.Print()
+}
+
+func testMergeSort() {
 	// create multiple slices of integers
 	itemsList := [][]int{
 		{5, 4, 3, 2, 1},
