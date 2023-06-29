@@ -11,5 +11,7 @@
 
 n=$1
 echo $n
-seq $n | sort -R | tr '\n' ' '
+for ((i=1; i<=$n; i++)); do
+  echo $i
+done | sort -R | tr '\n' ' '
 echo
