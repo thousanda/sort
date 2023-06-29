@@ -7,6 +7,8 @@ import (
 	"os"
 )
 
+const ShouldPrintSorted = false
+
 func main() {
 	/* 引数のファイルからソート対象を読み込む */
 	if len(os.Args) < 2 {
@@ -34,7 +36,9 @@ func main() {
 	timer.Stop()
 
 	// ソート結果出力
-	fmt.Println(sorted)
+	if ShouldPrintSorted {
+		fmt.Println(sorted)
+	}
 
 	// 計測結果出力
 	timer.Print()
