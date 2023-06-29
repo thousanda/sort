@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/thousanda/sort/go/merge_sort"
+	"github.com/thousanda/sort/go/selection_sort"
 	"github.com/thousanda/sort/go/util"
 	"os"
 )
@@ -28,16 +28,14 @@ func main() {
 	timer.Start()
 
 	// 計測したい処理
-	//runMergeSort()
-	sorted := merge_sort.MergeSort(arr)
+	selection_sort.SelectionSort(arr)
 
 	// 計測終了
 	timer.Stop()
 
 	// ソート結果出力
-	fmt.Println(sorted)
+	fmt.Println(arr)
 
 	// 計測結果出力
 	timer.Print()
-
 }
