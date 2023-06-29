@@ -7,7 +7,10 @@ import (
 	"os"
 )
 
-const ShouldPrintSorted = false
+const (
+	ShouldPrintSorted = false
+	ScannerCapacity   = 10 * 1024 * 1024 // 10MB
+)
 
 func main() {
 	/* 引数のファイルからソート対象を読み込む */
@@ -16,7 +19,7 @@ func main() {
 		return
 	}
 
-	n, arr, err := util.InputFile(os.Args[1])
+	n, arr, err := util.InputFile(os.Args[1], ScannerCapacity)
 	if err != nil {
 		fmt.Println(err)
 		return

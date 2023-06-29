@@ -8,14 +8,17 @@ import (
 	"strings"
 )
 
-func InputFile(filename string) (int, []int64, error) {
+func InputFile(filename string, capacity int) (int, []int64, error) {
 	file, err := os.Open(filename)
 	if err != nil {
 		return 0, nil, fmt.Errorf("ファイルオープン失敗: %w", err)
 	}
 	defer file.Close()
 
+	// 指定されたバッファサイズを持つScannerを作成する
 	scanner := bufio.NewScanner(file)
+	buf := make([]byte, capacity)
+	scanner.Buffer(buf, capacity)
 
 	// 1行目を読み込み
 	scanner.Scan()
