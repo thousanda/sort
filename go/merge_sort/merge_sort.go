@@ -1,14 +1,14 @@
 package merge_sort
 
 // MergeSort function to sort a slice of integers
-func MergeSort(items []int) []int {
+func MergeSort(items []int64) []int64 {
 	// if the slice has only one element, return it
 	if len(items) < 2 {
 		return items
 	}
 
 	// create a slice to hold the sorted values to return
-	ans := make([]int, len(items))
+	ans := make([]int64, len(items))
 
 	// split the slice into two halves and sort each half recursively
 	left := MergeSort(items[:len(items)/2])

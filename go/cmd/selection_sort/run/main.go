@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/thousanda/sort/go/selection_sort"
-	"github.com/thousanda/sort/go/timer"
+	"github.com/thousanda/sort/go/util"
 )
 
 // 入力なしで試しに動かす
@@ -17,7 +17,7 @@ func main() {
 		{5, 1, 4, 2, 3},
 	}
 
-	timer := timer.Timer{}
+	timer := util.Timer{}
 
 	// 計測スタート
 	timer.Start()
